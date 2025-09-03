@@ -1,8 +1,9 @@
 public class PhysicalGame extends Game {
-    String condition; // ex: "Neuf", "Très bon", "Bon", etc.
+    String condition;
 
-    public PhysicalGame(int id, String title, String genre, String releaseDate, double price, String condition) {
-        super(id, title, genre, releaseDate, price);
+    public PhysicalGame(int id, String title, String genre, String releaseDate, double price,
+                        Platform platform, String condition) {
+        super(id, title, genre, releaseDate, price, platform);
         this.condition = condition;
     }
 
@@ -10,4 +11,7 @@ public class PhysicalGame extends Game {
     public String toString() {
         return super.toString() + "\ncondition='" + condition + "'";
     }
+
+    @Override
+    public String kind() { return "Physique"; }
 }

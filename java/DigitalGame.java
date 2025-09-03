@@ -1,8 +1,9 @@
 public class DigitalGame extends Game {
-    double downloadSizeGb; // ex: 35.4
+    double downloadSizeGb;
 
-    public DigitalGame(int id, String title, String genre, String releaseDate, double price, double downloadSizeGb) {
-        super(id, title, genre, releaseDate, price);
+    public DigitalGame(int id, String title, String genre, String releaseDate, double price,
+                       Platform platform, double downloadSizeGb) {
+        super(id, title, genre, releaseDate, price, platform);
         this.downloadSizeGb = downloadSizeGb;
     }
 
@@ -10,4 +11,7 @@ public class DigitalGame extends Game {
     public String toString() {
         return super.toString() + "\ndownloadSizeGb=" + downloadSizeGb;
     }
+
+    @Override
+    public String kind() { return "Numérique"; }
 }
