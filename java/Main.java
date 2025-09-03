@@ -2,12 +2,17 @@
 
 public class Main {
     public static void main(String[] args) {
-        Game game1 = new Game(1, "Game Title", "Action", "2023-01-01", 59.99);
-        Game game2 = new Game(2, "coucou", "Action", "2023-01-01", 49.99);
+    // dans java/Main.java (uniquement les 2 lignes de création)
+    PhysicalGame game1 = new PhysicalGame(1, "Game Title", "Action", "2023-01-01", 59.99, "Neuf");
+    PhysicalGame game2 = new PhysicalGame(2, "coucou", "Action", "2023-01-01", 49.99, "Bon état");
+    DigitalGame game3 = new DigitalGame(3, "Indie Chill", "Puzzle", "2024-02-10", 14.99, 2.3);
+
+
 
         GameCollection collection = new GameCollection();
         collection.addGame(game1);
         collection.addGame(game2);
+        collection.addGame(game3);
 
         collection.listGames();
     }
